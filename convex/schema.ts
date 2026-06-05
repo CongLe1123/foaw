@@ -8,7 +8,6 @@ export default defineSchema({
     tagline: v.string(),
     photoUrl: v.string(), // Recommended element
     email: v.string(),    // Mandatory Contact element
-    linkedin: v.string(), // Mandatory Contact element
     otherLinks: v.array(v.object({ label: v.string(), url: v.string() })),
   }),
 

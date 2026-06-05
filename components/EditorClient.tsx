@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Feather, Laptop, Eye, FileText, User, BookOpen, AlertCircle, Edit } from "lucide-react";
 import { useReactiveDb, Artifact } from "@/lib/db";
 
-type EditorCategory = "profile" | "sop" | "cultural-adaptation" | "cv" | "student-plan" | "letter-of-recommendation";
+type EditorCategory = "profile" | "sop" | "cultural-adaptation" | "cv" | "program-material" | "letter-of-recommendation" | "exchange-sop";
 
 export default function EditorClient() {
   const {
@@ -24,8 +24,7 @@ export default function EditorClient() {
   const [localProfile, setLocalProfile] = useState({
     name: "",
     tagline: "",
-    email: "",
-    linkedin: ""
+    email: ""
   });
   const [localSop, setLocalSop] = useState("");
   const [localArtifacts, setLocalArtifacts] = useState<{ [key: string]: Partial<Artifact> }>({});
@@ -41,11 +40,10 @@ export default function EditorClient() {
       setLocalProfile({
         name: profile.name || "",
         tagline: profile.tagline || "",
-        email: profile.email || "",
-        linkedin: profile.linkedin || ""
+        email: profile.email || ""
       });
     }
-  }, [profile.name, profile.tagline, profile.email, profile.linkedin]);
+  }, [profile.name, profile.tagline, profile.email]);
 
   useEffect(() => {
     if (sop && !sopTimeoutRef.current) {
@@ -270,12 +268,12 @@ export default function EditorClient() {
               Curriculum Vitae (Art3)
             </button>
             <button
-              onClick={() => setActiveCategory("student-plan")}
+              onClick={() => setActiveCategory("program-material")}
               className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
-                activeCategory === "student-plan" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
+                activeCategory === "program-material" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
               }`}
             >
-              Plan (Art4)
+              Material (Art4)
             </button>
             <button
               onClick={() => setActiveCategory("letter-of-recommendation")}
@@ -284,6 +282,14 @@ export default function EditorClient() {
               }`}
             >
               Rec (Art5)
+            </button>
+            <button
+              onClick={() => setActiveCategory("exchange-sop")}
+              className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
+                activeCategory === "exchange-sop" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
+              }`}
+            >
+              Exch SOP (Art6)
             </button>
           </div>
 
@@ -315,15 +321,6 @@ export default function EditorClient() {
                     type="email"
                     value={localProfile.email}
                     onChange={(e) => handleProfileChange("email", e.target.value)}
-                    className="w-full bg-white border border-pink-100 rounded-lg p-2.5 text-slate-800 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 font-sans text-xs"
-                  />
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-slate-500 text-xs font-bold">LinkedIn URL</label>
-                  <input
-                    type="text"
-                    value={localProfile.linkedin}
-                    onChange={(e) => handleProfileChange("linkedin", e.target.value)}
                     className="w-full bg-white border border-pink-100 rounded-lg p-2.5 text-slate-800 focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 font-sans text-xs"
                   />
                 </div>
@@ -498,7 +495,6 @@ export default function EditorClient() {
 
                     <div className="flex flex-wrap gap-2 justify-center max-w-xs text-[9px] font-serif">
                       <span className="px-2 py-1 rounded bg-white border border-pink-100 text-slate-600 truncate max-w-[130px]">Email: {localProfile.email}</span>
-                      <span className="px-2 py-1 rounded bg-white border border-pink-100 text-slate-600">LinkedIn Connected</span>
                     </div>
                   </motion.div>
                 )}

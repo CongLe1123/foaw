@@ -15,7 +15,6 @@ export const update = mutation({
     tagline: v.string(),
     photoUrl: v.string(),
     email: v.string(),
-    linkedin: v.string(),
     otherLinks: v.array(v.object({ label: v.string(), url: v.string() }))
   },
   handler: async (ctx, args) => {

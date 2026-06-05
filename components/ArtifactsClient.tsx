@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Edit3, Users, CheckCircle } from "lucide-react";
 import { useReactiveDb } from "@/lib/db";
 import NotebookLayout from "@/components/NotebookLayout";
+import { DeerIcon, BirdIcon, FrogIcon, BearIcon } from "@/components/AnimalIcons";
 
 export default function ArtifactsClient() {
   const { artifacts } = useReactiveDb();
@@ -19,7 +20,7 @@ export default function ArtifactsClient() {
   // Sync with query param 'tab' if it exists (e.g. from Home page clicks)
   useEffect(() => {
     const tabParam = searchParams.get("tab");
-    if (tabParam && ["cultural-adaptation", "cv", "student-plan", "letter-of-recommendation"].includes(tabParam)) {
+    if (tabParam && ["cultural-adaptation", "cv", "program-material", "letter-of-recommendation", "exchange-sop"].includes(tabParam)) {
       setActiveTab(tabParam);
     }
   }, [searchParams]);
@@ -39,10 +40,12 @@ export default function ArtifactsClient() {
         return "#ff5493";
       case "cv":
         return "#dbeb9d";
-      case "student-plan":
+      case "program-material":
         return "#ff5493";
       case "letter-of-recommendation":
         return "#dbeb9d";
+      case "exchange-sop":
+        return "#ff5493";
       default:
         return "#ff5493";
     }
@@ -54,10 +57,12 @@ export default function ArtifactsClient() {
         return "CULTURAL ADAPTATION";
       case "cv":
         return "CURRICULUM VITAE";
-      case "student-plan":
-        return "STUDENT PLAN";
+      case "program-material":
+        return "PROGRAM MATERIAL";
       case "letter-of-recommendation":
         return "LETTER OF RECOMMENDATION";
+      case "exchange-sop":
+        return "EXCHANGE STATE OF PURPOSE";
       default:
         return "ACADEMIC DOCUMENT";
     }
@@ -133,9 +138,31 @@ export default function ArtifactsClient() {
     ? activeArtifact.revisionNarrative.trim().split(/\s+/).length
     : 0;
 
+  const renderAnimalIcon = () => {
+    switch (activeTab) {
+      case "cultural-adaptation":
+        return <FrogIcon className="w-16 h-16" />;
+      case "cv":
+        return <BearIcon className="w-16 h-16" />;
+      case "program-material":
+        return <BirdIcon className="w-16 h-16" />;
+      case "letter-of-recommendation":
+        return <DeerIcon className="w-16 h-16" />;
+      case "exchange-sop":
+        return <DeerIcon className="w-16 h-16" />;
+      default:
+        return null;
+    }
+  };
+
   // Custom side panel containing peer feedback and the revision narrative
   const sidePanel = (
     <div className="space-y-6">
+      <div className="p-4 rounded-2xl border-3 border-black bg-white flex flex-col items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+        {renderAnimalIcon()}
+        <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mt-1">Companion Guide</span>
+      </div>
+
       {/* Block B: Peer Reviews */}
       <div className="p-5 rounded-2xl border-3 border-black bg-white space-y-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
         <div className="flex items-center gap-2 border-b-2 border-black pb-3 mb-2 font-serif-hand">

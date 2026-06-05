@@ -154,7 +154,7 @@ export default function HomeClient() {
             <span className="text-3xl">☺</span>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
             {/* Artifact 1: Cultural Adaptation */}
             <div className="flex flex-col items-center gap-3">
               <Link href="/artifacts?tab=cultural-adaptation" className="w-full aspect-[4/3] rounded-2xl overflow-hidden bg-white border-3 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] relative group block">
@@ -164,7 +164,7 @@ export default function HomeClient() {
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </Link>
-              <Link href="/artifacts?tab=cultural-adaptation" className="px-6 py-2.5 text-sm font-bold text-slate-800 bg-[#d1c4e9] border-2 border-black border-dashed rounded-full hover:bg-[#b39ddb] transition-all text-center">
+              <Link href="/artifacts?tab=cultural-adaptation" className="w-full px-4 py-2.5 text-xs font-bold text-slate-800 bg-[#d1c4e9] border-2 border-black border-dashed rounded-full hover:bg-[#b39ddb] transition-all text-center">
                 Cultural Adaptation
               </Link>
             </div>
@@ -178,22 +178,22 @@ export default function HomeClient() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </Link>
-              <Link href="/artifacts?tab=cv" className="px-6 py-2.5 text-sm font-bold text-slate-800 bg-[#ffe0e9] border-2 border-black border-dashed rounded-full hover:bg-[#ffb74d] transition-all text-center">
+              <Link href="/artifacts?tab=cv" className="w-full px-4 py-2.5 text-xs font-bold text-slate-800 bg-[#ffe0e9] border-2 border-black border-dashed rounded-full hover:bg-[#ffb74d] transition-all text-center">
                 Curriculum Vitae
               </Link>
             </div>
 
-            {/* Artifact 3: Student Plan */}
+            {/* Artifact 3: Program Material */}
             <div className="flex flex-col items-center gap-3">
-              <Link href="/artifacts?tab=student-plan" className="w-full aspect-[4/3] rounded-2xl overflow-hidden bg-white border-3 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] relative group block">
+              <Link href="/artifacts?tab=program-material" className="w-full aspect-[4/3] rounded-2xl overflow-hidden bg-white border-3 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] relative group block">
                 <img
                   src="/Study Plan.png"
-                  alt="Student Plan"
+                  alt="Program Material"
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </Link>
-              <Link href="/artifacts?tab=student-plan" className="px-6 py-2.5 text-sm font-bold text-slate-800 bg-[#c8e6c9] border-2 border-black border-dashed rounded-full hover:bg-[#81c784] transition-all text-center">
-                Student Plan
+              <Link href="/artifacts?tab=program-material" className="w-full px-4 py-2.5 text-xs font-bold text-slate-800 bg-[#c8e6c9] border-2 border-black border-dashed rounded-full hover:bg-[#81c784] transition-all text-center">
+                Program Material
               </Link>
             </div>
 
@@ -206,8 +206,22 @@ export default function HomeClient() {
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </Link>
-              <Link href="/artifacts?tab=letter-of-recommendation" className="px-6 py-2.5 text-sm font-bold text-slate-800 bg-[#ffe0b2] border-2 border-black border-dashed rounded-full hover:bg-[#ffd54f] transition-all text-center">
-                Letter of Recommendation
+              <Link href="/artifacts?tab=letter-of-recommendation" className="w-full px-4 py-2.5 text-xs font-bold text-slate-800 bg-[#ffe0b2] border-2 border-black border-dashed rounded-full hover:bg-[#ffd54f] transition-all text-center">
+                Letter of Rec
+              </Link>
+            </div>
+
+            {/* Artifact 5: Exchange State of Purpose */}
+            <div className="flex flex-col items-center gap-3">
+              <Link href="/artifacts?tab=exchange-sop" className="w-full aspect-[4/3] rounded-2xl overflow-hidden bg-white border-3 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] relative group block">
+                <img
+                  src="/State of Purpose.png"
+                  alt="Exchange State of Purpose"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                />
+              </Link>
+              <Link href="/artifacts?tab=exchange-sop" className="w-full px-4 py-2.5 text-xs font-bold text-slate-800 bg-[#c5cae9] border-2 border-black border-dashed rounded-full hover:bg-[#9fa8da] transition-all text-center">
+                Exchange SOP
               </Link>
             </div>
           </div>

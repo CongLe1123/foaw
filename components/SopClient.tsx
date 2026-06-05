@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Calendar, Award, GraduationCap, CheckCircle } from "lucide-react";
 import { useReactiveDb } from "@/lib/db";
 import NotebookLayout from "@/components/NotebookLayout";
+import { DeerIcon } from "@/components/AnimalIcons";
 
 export default function SopClient() {
   const { sop } = useReactiveDb();
@@ -19,7 +20,8 @@ export default function SopClient() {
       transition={{ delay: 0.2 }}
       className="p-6 rounded-2xl border-3 border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] space-y-6"
     >
-      <div className="border-b-2 border-black pb-3">
+      <div className="border-b-2 border-black pb-3 flex flex-col items-center gap-2">
+        <DeerIcon className="w-16 h-16" />
         <h3 className="font-serif-hand text-lg text-black font-black">Essay Metadata</h3>
       </div>
       

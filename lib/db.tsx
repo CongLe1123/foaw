@@ -131,7 +131,7 @@ ttadao@hcmus.edu.vn`,
 
 ## **📑 PROFESSIONAL SUMMARY**
 
-An analytical and research-driven First-Year Medical Student at VinUniversity with a specific focus on **Epidemiology and Public Health**. Combines a rigorous medical curriculum with hands-on experience in biological research, national-level academic event coordination, and environmental conservation. Proven ability to analyze complex ecosystems—ranging from laboratory electrophysiology to the intersection of urban architecture and vector-borne disease transmission. Eager to contribute to and expand academic horizons through the exchange program at Sechenov University.
+I am a  first-year medical student at VinUniversity who wants to broaden my horizen about clinical work in a more diverse environment. Combines a basic medical knowledge with hands-on experience in biological research, national-level academic event organizer, and environmental volunteer. Proven ability to deal with complex, new environments from laboratory to the real ecological field trip. I am eager to contribute to and expand academic horizons through the exchange program at Sechenov University.
 
 ## **🎓 EDUCATION BACKGROUND**
 
@@ -147,12 +147,12 @@ An analytical and research-driven First-Year Medical Student at VinUniversity wi
 
 ## **🔬 RESEARCH & ACADEMIC EXPERIENCES**
 
-**Independent Research | Public Health & Urban Epidemiology** | *2026*
+**University Research | Public Health & Urban Epidemiology** | *2026*
 
 * **Project:** The impact of building design features on mosquito distribution and abundance in high-rise residential complexes.  
 * **Focus:** Investigated how modern building designs and vertical infestation profiles affect mosquito breeding habits and dengue transmission, aiming to propose structural interventions for urban disease control.
 
-**Highschool Laboratory Research | Neurophysiology** | *2026*
+**Highschool Laboratory Research | Ecology** | *2024*
 
 * **Project:** Survey on the food composition of Asian Toad (*Duttaphrynus melanostictus*) at Parks, City. Ho Chi Minh  
 * **Methodology:** Do field surveys and dietary analysis of urban toad populations to assess food composition and ecological roles in urban green spaces. This research provided foundational insights into natural control. 

@@ -179,7 +179,7 @@ export default function HomeClient() {
                 />
               </Link>
               <Link href="/artifacts?tab=letter-of-recommendation" className="w-full px-4 py-2.5 text-xs font-bold text-slate-800 bg-[#ffe0b2] border-2 border-black border-dashed rounded-full hover:bg-[#ffd54f] transition-all text-center">
-                Letter of Rec
+                Letter of Recommendation
               </Link>
             </div>
 

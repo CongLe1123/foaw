@@ -24,7 +24,7 @@ export default function SopClient() {
         <DeerIcon className="w-16 h-16" />
         <h3 className="font-serif-hand text-lg text-black font-black">Essay Metadata</h3>
       </div>
-      
+
       <ul className="space-y-4 text-xs font-bold text-slate-700">
         <li className="flex items-center gap-2">
           <GraduationCap className="w-4 h-4 text-[#ff5493] shrink-0" />
@@ -65,11 +65,7 @@ export default function SopClient() {
             ))}
           </article>
 
-          {/* Academic Signature */}
-          <div className="mt-8 pt-6 border-t-2 border-dashed border-black/10 flex flex-col sm:flex-row justify-between items-start sm:items-center text-xs font-bold italic text-slate-650 gap-2">
-            <span>Author: Nguyễn Lê Tú Oanh</span>
-            <span>Academic Reflection // Essay 1</span>
-          </div>
+
         </NotebookLayout>
       </div>
     </div>

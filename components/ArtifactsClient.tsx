@@ -287,11 +287,7 @@ export default function ArtifactsClient() {
                 {parseMarkdown(activeArtifact?.documentBody || "")}
               </article>
 
-              {/* Academic Signature */}
-              <div className="mt-8 pt-6 border-t-2 border-dashed border-black/10 flex flex-col sm:flex-row justify-between items-start sm:items-center text-xs font-bold italic text-slate-650 gap-2">
-                <span>Author: Nguyễn Lê Tú Oanh</span>
-                <span>Academic Reflection // {activeArtifact?.title || "Essay"}</span>
-              </div>
+
             </NotebookLayout>
           </motion.div>
         </AnimatePresence>

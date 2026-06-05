@@ -60,13 +60,13 @@ An analytical and research-driven First-Year Medical Student at VinUniversity wi
 
 ## **🎓 EDUCATION BACKGROUND**
 
-**VinUniversity (VinUni)** | *2025 – Present*
+**VinUniversity (VinUni)** | *2025 - Present*
 
 * **Degree:** Bachelor of General Medicine (MD Program)  
 * **Current Status:** First-Year Student (Freshman)  
 * **Relevant Coursework:** Medical Biology, Medical Chemistry, Medical Biochemistry, Medical Biophysic, Introduction to Healthcare Communication.
 
-**High School for the Gifted – VNU-HCM (Phổ thông Năng khiếu)** | *Graduated*
+**High School for the Gifted - VNU-HCM (Phổ thông Năng khiếu)** | *Graduated*
 
 * **Major:** Specialized in Biology
 
@@ -86,7 +86,7 @@ An analytical and research-driven First-Year Medical Student at VinUniversity wi
 ## **🏆 LEADERSHIP, EXTRA-CURRICULAR & VOLUNTEER EXPERIENCES**
 
 **National Medical Academic Competition (NMAC 2025\)**  
-*Organizing Committee Member – Design Team* | *2025*
+*Organizing Committee Member - Design Team* | *2025*
 
 * Collaborated in branding and creating visual educational assets for Vietnam's premier national-level academic contest for medical students.
 

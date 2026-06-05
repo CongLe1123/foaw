@@ -40,7 +40,7 @@ The interface features a personalized layout pairing a high-contrast dark palett
 * *Accent Pink:* Soft pastel blush, hot pink, or magenta tones (`#f43f5e` or `#ec4899`) applied cleanly to borders, tabs, call-to-action hover triggers, and active focus rings.
 
 
-* **Typography:** Accessible sans-serif scales (e.g., Geist Sans or Inter) locking all paragraph body copy to a minimum layout scale of 11–12pt to fulfill accessibility rules.
+* **Typography:** Accessible sans-serif scales (e.g., Geist Sans or Inter) locking all paragraph body copy to a minimum layout scale of 11-12pt to fulfill accessibility rules.
 
 
 
@@ -136,7 +136,7 @@ export default defineSchema({
 * **Mandatory Elements:** Explicitly featured as your **first artifact/section**, positioned in a layout context that is highly visible and easy to locate.
 
 
-* **Academic Content:** Hosts a **400–500 word** reflective text addressing:
+* **Academic Content:** Hosts a **400-500 word** reflective text addressing:
 
 
 1. *Your Goals:* Short/long-term professional and academic objectives.
@@ -179,7 +179,7 @@ Each artifact sub-view enforces a strict 3-block structural hierarchy:
 * **Block B (Peer Feedback Documentation):** Framer Motion accordion blocks displaying clear visual proof of **two peer reviews**, showing names, date signatures, and the exact constructive text comments received.
 
 
-* **Block C (Revision Narrative):** Placed **firmly at the bottom of the page**. Renders a **100–300 word** overview mapping what you changed, why you changed it (referencing peer advice or personal critique), and the resulting impact of those edits.
+* **Block C (Revision Narrative):** Placed **firmly at the bottom of the page**. Renders a **100-300 word** overview mapping what you changed, why you changed it (referencing peer advice or personal critique), and the resulting impact of those edits.
 
 
 
@@ -210,7 +210,7 @@ To secure a definitive "Meets Expectations" grade on initial project evaluation,
 * [ ] **Double Review Tracking:** Every single package artifact page embeds distinct data parameters tracking two separate peer review validation events.
 
 
-* [ ] **Narrative Anchor:** Every single package artifact page strictly ends with its own dedicated 100–300 word narrative breakdown block.
+* [ ] **Narrative Anchor:** Every single package artifact page strictly ends with its own dedicated 100-300 word narrative breakdown block.
 
 
 * [ ] **Ethical Authorship:** Absolutely zero AI-generated drafts inside the Statement of Purpose or job artifacts; writing components must showcase an authentic personal voice.

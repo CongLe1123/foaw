@@ -11,7 +11,7 @@ import { DeerIcon, BirdIcon, FrogIcon, BearIcon } from "@/components/AnimalIcons
 export default function ArtifactsClient() {
   const { artifacts } = useReactiveDb();
   const searchParams = useSearchParams();
-  const [activeTab, setActiveTab] = useState<string>("cultural-adaptation");
+  const [activeTab, setActiveTab] = useState<string>("exchange-sop");
   const [openReviewers, setOpenReviewers] = useState<{ [key: string]: boolean }>({
     rev1: true,
     rev2: false

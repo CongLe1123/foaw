@@ -251,29 +251,13 @@ export default function EditorClient() {
             >
               Essay (Art1)
             </button>
-            <button
-              onClick={() => setActiveCategory("cultural-adaptation")}
+             <button
+              onClick={() => setActiveCategory("exchange-sop")}
               className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
-                activeCategory === "cultural-adaptation" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
+                activeCategory === "exchange-sop" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
               }`}
             >
-              Adaptation (Art2)
-            </button>
-            <button
-              onClick={() => setActiveCategory("cv")}
-              className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
-                activeCategory === "cv" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
-              }`}
-            >
-              Curriculum Vitae (Art3)
-            </button>
-            <button
-              onClick={() => setActiveCategory("program-material")}
-              className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
-                activeCategory === "program-material" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
-              }`}
-            >
-              Material (Art4)
+              Exch SOP (Art2)
             </button>
             <button
               onClick={() => setActiveCategory("letter-of-recommendation")}
@@ -281,15 +265,31 @@ export default function EditorClient() {
                 activeCategory === "letter-of-recommendation" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
               }`}
             >
-              Rec (Art5)
+              Rec (Art3)
             </button>
             <button
-              onClick={() => setActiveCategory("exchange-sop")}
+              onClick={() => setActiveCategory("cv")}
               className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
-                activeCategory === "exchange-sop" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
+                activeCategory === "cv" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
               }`}
             >
-              Exch SOP (Art6)
+              CV (Art4)
+            </button>
+            <button
+              onClick={() => setActiveCategory("cultural-adaptation")}
+              className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
+                activeCategory === "cultural-adaptation" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
+              }`}
+            >
+              Adaptation (Art5)
+            </button>
+            <button
+              onClick={() => setActiveCategory("program-material")}
+              className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
+                activeCategory === "program-material" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
+              }`}
+            >
+              Material (Art6)
             </button>
           </div>
 

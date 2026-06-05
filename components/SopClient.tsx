@@ -57,9 +57,9 @@ export default function SopClient() {
     <div className="flex-1 bg-[#dbeb9d] w-full min-h-screen px-4 py-12 relative flex items-center justify-center">
       <div className="max-w-6xl w-full">
         <NotebookLayout title="STATEMENT OF PURPOSE" sidePanel={sidePanel}>
-          <article className="space-y-8 text-slate-800 leading-[2rem] font-sans text-sm md:text-[15px] text-justify">
-            {sop.content.split("\n\n").map((paragraph, index) => (
-              <p key={index} className="indent-0 m-0">
+          <article className="space-y-0 text-slate-800 leading-[2rem] font-sans text-sm md:text-[15px] text-justify">
+            {sop.content.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((paragraph, index) => (
+              <p key={index} className="indent-8 m-0">
                 {paragraph}
               </p>
             ))}

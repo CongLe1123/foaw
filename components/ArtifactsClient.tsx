@@ -83,7 +83,13 @@ export default function ArtifactsClient() {
             </code>
           );
         }
-        return subPart;
+        const italicParts = subPart.split(/(\*[^*]+\*)/g);
+        return italicParts.map((italPart, k) => {
+          if (italPart.startsWith("*") && italPart.endsWith("*")) {
+            return <em key={`i-${i}-${j}-${k}`} className="italic font-medium text-slate-600">{italPart.slice(1, -1)}</em>;
+          }
+          return italPart;
+        });
       });
     });
   };
@@ -126,8 +132,9 @@ export default function ArtifactsClient() {
       if (trimmed === "") {
         return null;
       }
+      const isBoldStart = trimmed.startsWith("**");
       return (
-        <p key={idx} className="text-slate-800 text-sm font-sans leading-[2rem] m-0 mb-8">
+        <p key={idx} className={`text-slate-800 text-sm font-sans leading-[2rem] m-0 mb-0 ${isBoldStart ? "indent-0" : "indent-8"}`}>
           {formatText(line)}
         </p>
       );

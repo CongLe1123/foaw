@@ -66,36 +66,41 @@ body {
 
 .prose-custom {
   font-size: 15px;
+  line-height: 2rem;
 }
 .prose-custom h1 {
   font-size: 24px;
   font-weight: 700;
   color: #000;
-  margin-top: 28px;
-  margin-bottom: 14px;
+  line-height: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   border-bottom: 2px dashed #ff5493;
-  padding-bottom: 8px;
+  padding-bottom: 6px;
   font-family: 'Arvo', Georgia, serif;
 }
 .prose-custom h2 {
   font-size: 18px;
   font-weight: 600;
   color: #ff5493;
-  margin-top: 22px;
-  margin-bottom: 10px;
+  line-height: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   font-family: 'Arvo', Georgia, serif;
 }
 .prose-custom p {
-  margin-bottom: 14px;
+  margin-bottom: 2rem;
   color: #2d3748;
+  line-height: 2rem;
 }
 .prose-custom ul {
   list-style-type: disc;
   margin-left: 24px;
-  margin-bottom: 14px;
+  margin-bottom: 2rem;
 }
 .prose-custom li {
-  margin-bottom: 6px;
+  margin-bottom: 0px;
+  line-height: 2rem;
 }
 
 /* Custom scrollbars */

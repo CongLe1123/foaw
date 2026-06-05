@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Feather, Laptop, Eye, FileText, User, BookOpen, AlertCircle, Edit } from "lucide-react";
 import { useReactiveDb, Artifact } from "@/lib/db";
 
-type EditorCategory = "profile" | "sop" | "cv" | "cover-letter" | "linkedin-opt" | "email-templates";
+type EditorCategory = "profile" | "sop" | "cultural-adaptation" | "cv" | "student-plan" | "letter-of-recommendation";
 
 export default function EditorClient() {
   const {
@@ -254,36 +254,36 @@ export default function EditorClient() {
               Essay (Art1)
             </button>
             <button
+              onClick={() => setActiveCategory("cultural-adaptation")}
+              className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
+                activeCategory === "cultural-adaptation" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
+              }`}
+            >
+              Adaptation (Art2)
+            </button>
+            <button
               onClick={() => setActiveCategory("cv")}
               className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
                 activeCategory === "cv" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
               }`}
             >
-              CV (Art2)
+              Curriculum Vitae (Art3)
             </button>
             <button
-              onClick={() => setActiveCategory("cover-letter")}
+              onClick={() => setActiveCategory("student-plan")}
               className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
-                activeCategory === "cover-letter" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
+                activeCategory === "student-plan" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
               }`}
             >
-              Cover (Art3)
+              Plan (Art4)
             </button>
             <button
-              onClick={() => setActiveCategory("linkedin-opt")}
+              onClick={() => setActiveCategory("letter-of-recommendation")}
               className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
-                activeCategory === "linkedin-opt" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
+                activeCategory === "letter-of-recommendation" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
               }`}
             >
-              LinkedIn (Art4)
-            </button>
-            <button
-              onClick={() => setActiveCategory("email-templates")}
-              className={`flex-1 py-1.5 px-2 rounded-lg font-serif text-xs text-center transition-all cursor-pointer ${
-                activeCategory === "email-templates" ? "bg-pink-500 text-white font-bold" : "text-slate-600 hover:text-pink-600"
-              }`}
-            >
-              Emails (Art5)
+              Rec (Art5)
             </button>
           </div>
 
@@ -466,8 +466,8 @@ export default function EditorClient() {
 
           {/* Scaled Reading pane frame */}
           <div className="flex-grow rounded-xl border border-pink-100 bg-white overflow-hidden relative min-h-[400px] flex flex-col shadow-inner">
-            <div className="px-4 py-2 border-b border-pink-100 bg-pink-50/30 flex justify-between items-center text-xs text-slate-550 font-serif italic">
-              <span className="flex items-center gap-1.5 font-semibold"><Feather className="w-3.5 h-3.5 text-pink-500" /> Sophia Le Selected Reflections // Active Preview</span>
+            <div className="px-4 py-2 border-b border-pink-100 bg-pink-50/30 flex justify-between items-center text-xs text-slate-555 font-serif italic">
+              <span className="flex items-center gap-1.5 font-semibold"><Feather className="w-3.5 h-3.5 text-pink-500" /> Nguyễn Lê Tú Oanh Selected Reflections // Active Preview</span>
               <span>Reader Frame</span>
             </div>
 
@@ -485,8 +485,8 @@ export default function EditorClient() {
                     <div className="relative w-20 h-20 rounded-full p-0.5 bg-gradient-to-tr from-pink-500 to-sky-400 animate-pulse">
                       <div className="w-full h-full bg-white rounded-full overflow-hidden flex items-center justify-center relative">
                         <img
-                          src="/sophia_avatar.png"
-                          alt="Sophia Avatar preview"
+                          src="/Avatar.jpg"
+                          alt="Nguyễn Lê Tú Oanh Avatar preview"
                           className="object-cover w-full h-full"
                         />
                       </div>

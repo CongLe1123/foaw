@@ -83,9 +83,9 @@ export default function ContactClient() {
           </div>
         </motion.a>
 
-        {/* LinkedIn Card */}
+        {/* Facebook Card */}
         <motion.a
-          href={profile.linkedin}
+          href="https://www.facebook.com/tu.oanh.490611"
           target="_blank"
           rel="noopener noreferrer"
           variants={itemVariants}
@@ -101,9 +101,9 @@ export default function ContactClient() {
           </div>
 
           <div className="space-y-1">
-            <span className="text-[11px] text-slate-500 italic">LinkedIn Network Garden</span>
+            <span className="text-[11px] text-slate-500 italic">Facebook Connections</span>
             <h3 className="text-base sm:text-lg font-bold text-slate-800 group-hover:text-pink-655 transition-colors truncate">
-              Sophia Le Profile
+              Nguyễn Lê Tú Oanh Profile
             </h3>
             <p className="text-xs text-slate-500 font-sans">Connect and share in professional journeys.</p>
           </div>

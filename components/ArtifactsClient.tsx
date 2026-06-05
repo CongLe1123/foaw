@@ -10,7 +10,7 @@ import NotebookLayout from "@/components/NotebookLayout";
 export default function ArtifactsClient() {
   const { artifacts } = useReactiveDb();
   const searchParams = useSearchParams();
-  const [activeTab, setActiveTab] = useState<string>("cv");
+  const [activeTab, setActiveTab] = useState<string>("cultural-adaptation");
   const [openReviewers, setOpenReviewers] = useState<{ [key: string]: boolean }>({
     rev1: true,
     rev2: false
@@ -19,7 +19,7 @@ export default function ArtifactsClient() {
   // Sync with query param 'tab' if it exists (e.g. from Home page clicks)
   useEffect(() => {
     const tabParam = searchParams.get("tab");
-    if (tabParam && ["cv", "cover-letter", "linkedin-opt", "email-templates"].includes(tabParam)) {
+    if (tabParam && ["cultural-adaptation", "cv", "student-plan", "letter-of-recommendation"].includes(tabParam)) {
       setActiveTab(tabParam);
     }
   }, [searchParams]);
@@ -35,13 +35,13 @@ export default function ArtifactsClient() {
   // Determine background color based on active tab matching the design PDF
   const getBgColor = (key: string) => {
     switch (key) {
-      case "cv": // Letter of Rec
+      case "cultural-adaptation":
         return "#ff5493";
-      case "cover-letter": // Program Material
+      case "cv":
         return "#dbeb9d";
-      case "linkedin-opt": // Cultural Adaption
+      case "student-plan":
         return "#ff5493";
-      case "email-templates":
+      case "letter-of-recommendation":
         return "#dbeb9d";
       default:
         return "#ff5493";
@@ -50,48 +50,68 @@ export default function ArtifactsClient() {
 
   const getNotebookTitle = (key: string) => {
     switch (key) {
+      case "cultural-adaptation":
+        return "CULTURAL ADAPTATION";
       case "cv":
+        return "CURRICULUM VITAE";
+      case "student-plan":
+        return "STUDENT PLAN";
+      case "letter-of-recommendation":
         return "LETTER OF RECOMMENDATION";
-      case "cover-letter":
-        return "PROGRAM MATERIAL";
-      case "linkedin-opt":
-        return "CULTURAL ADAPTION ESAY";
-      case "email-templates":
-        return "EMAIL TEMPLATES";
       default:
         return "ACADEMIC DOCUMENT";
     }
   };
 
+  const formatText = (text: string) => {
+    const boldParts = text.split(/(\*\*[^*]+\*\*)/g);
+    return boldParts.map((part, i) => {
+      if (part.startsWith("**") && part.endsWith("**")) {
+        return <strong key={`b-${i}`} className="font-black text-black">{part.slice(2, -2)}</strong>;
+      }
+      const codeParts = part.split(/(`[^`]+`)/g);
+      return codeParts.map((subPart, j) => {
+        if (subPart.startsWith("`") && subPart.endsWith("`")) {
+          return (
+            <code key={`c-${i}-${j}`} className="px-1.5 py-0.5 rounded bg-slate-100 border border-slate-200 font-mono text-xs text-pink-600 font-semibold">
+              {subPart.slice(1, -1)}
+            </code>
+          );
+        }
+        return subPart;
+      });
+    });
+  };
+
   const parseMarkdown = (text: string) => {
     return text.split("\n").map((line, idx) => {
       const trimmed = line.trim();
-      
+
       if (trimmed.startsWith("# ")) {
         return (
-          <h1 key={idx} className="text-xl sm:text-2xl font-black text-black border-b-2 border-dashed border-slate-300 pb-2 mb-4 mt-6 font-serif-hand tracking-tight">
-            {trimmed.replace("# ", "")}
+          <h1 key={idx} className="text-xl sm:text-2xl font-black text-black border-b-2 border-dashed border-slate-300 pb-2 font-serif-hand tracking-tight leading-[2rem] m-0 mb-8">
+            {formatText(trimmed.replace("# ", ""))}
           </h1>
         );
       }
       if (trimmed.startsWith("## ")) {
         return (
-          <h2 key={idx} className="text-base sm:text-lg font-bold text-[#ff5493] mb-2 mt-4 font-serif-hand tracking-wide">
-            {trimmed.replace("## ", "")}
+          <h2 key={idx} className="text-base sm:text-lg font-bold text-[#ff5493] font-serif-hand tracking-wide leading-[2rem] m-0 mt-8 mb-8">
+            {formatText(trimmed.replace("## ", ""))}
           </h2>
         );
       }
       if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
         return (
-          <li key={idx} className="ml-5 list-disc text-slate-800 text-sm leading-relaxed mb-1">
-            {trimmed.substring(2)}
+          <li key={idx} className="ml-5 list-disc text-slate-800 text-sm leading-[2rem] m-0">
+            {formatText(trimmed.substring(2))}
           </li>
         );
       }
       if (trimmed.startsWith("> ")) {
         return (
-          <blockquote key={idx} className="border-l-4 border-[#ff5493] bg-pink-50/50 p-3 rounded-r-lg text-slate-850 italic text-sm my-2">
-            {trimmed.replace("> ", "")}
+          <blockquote key={idx} className="border-l-4 border-[#ff5493] bg-pink-50/50 p-3 rounded-r-lg text-slate-850 italic text-sm my-2 leading-[2rem] m-0 mb-8">
+            {formatText(trimmed.replace("> ", ""))}
           </blockquote>
         );
       }
@@ -99,11 +119,11 @@ export default function ArtifactsClient() {
         return <hr key={idx} className="border-dashed border-black/10 my-4" />;
       }
       if (trimmed === "") {
-        return <div key={idx} className="h-2" />;
+        return null;
       }
       return (
-        <p key={idx} className="text-slate-800 text-sm leading-relaxed mb-2 font-sans">
-          {line}
+        <p key={idx} className="text-slate-800 text-sm font-sans leading-[2rem] m-0 mb-8">
+          {formatText(line)}
         </p>
       );
     });
@@ -197,12 +217,12 @@ export default function ArtifactsClient() {
   const activeBg = getBgColor(activeTab);
 
   return (
-    <div 
-      className="flex-1 w-full min-h-screen py-12 px-4 transition-colors duration-500 flex flex-col items-center justify-center pt-24"
+    <div
+      className="flex-1 w-full min-h-screen py-12 px-4 transition-colors duration-500 flex flex-col items-center justify-center "
       style={{ backgroundColor: activeBg }}
     >
       <div className="max-w-6xl w-full">
-        
+
         {/* Interactive Tabs Header */}
         <div className="relative border-3 border-black bg-white p-1.5 rounded-2xl flex flex-wrap sm:flex-nowrap gap-1.5 mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
           {artifacts.map((art) => {
@@ -214,9 +234,8 @@ export default function ArtifactsClient() {
                   setActiveTab(art.key);
                   setOpenReviewers({ rev1: true, rev2: false });
                 }}
-                className={`relative flex-1 py-3 px-4 rounded-xl font-cute text-sm text-center transition-all duration-300 z-10 cursor-pointer border-2 ${
-                  isSelected ? "text-white font-black border-black bg-[#ff5493]" : "text-slate-700 hover:text-[#ff5493] border-transparent"
-                }`}
+                className={`relative flex-1 py-3 px-4 rounded-xl font-cute text-sm text-center transition-all duration-300 z-10 cursor-pointer border-2 ${isSelected ? "text-white font-black border-black bg-[#ff5493]" : "text-slate-700 hover:text-[#ff5493] border-transparent"
+                  }`}
               >
                 {art.title}
               </button>
@@ -233,12 +252,18 @@ export default function ArtifactsClient() {
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.25 }}
           >
-            <NotebookLayout 
-              title={getNotebookTitle(activeTab)} 
+            <NotebookLayout
+              title={getNotebookTitle(activeTab)}
               sidePanel={sidePanel}
             >
-              <div className="prose-custom max-w-none">
+              <article className="text-slate-800 font-sans text-sm md:text-[15px] text-justify">
                 {parseMarkdown(activeArtifact?.documentBody || "")}
+              </article>
+
+              {/* Academic Signature */}
+              <div className="mt-8 pt-6 border-t-2 border-dashed border-black/10 flex flex-col sm:flex-row justify-between items-start sm:items-center text-xs font-bold italic text-slate-650 gap-2">
+                <span>Author: Nguyễn Lê Tú Oanh</span>
+                <span>Academic Reflection // {activeArtifact?.title || "Essay"}</span>
               </div>
             </NotebookLayout>
           </motion.div>

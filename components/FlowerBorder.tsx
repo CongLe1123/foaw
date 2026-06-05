@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const FLOWER_COLORS = [
   "#fff176", // Yellow
@@ -16,79 +17,111 @@ interface FlowerProps {
 
 export const CuteFlower: React.FC<FlowerProps> = ({ color, className = "w-6 h-6" }) => {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Petals */}
-      <circle cx="12" cy="6.5" r="3.5" fill={color} />
-      <circle cx="17.5" cy="10.5" r="3.5" fill={color} />
-      <circle cx="15.5" cy="17" r="3.5" fill={color} />
-      <circle cx="8.5" cy="17" r="3.5" fill={color} />
-      <circle cx="6.5" cy="10.5" r="3.5" fill={color} />
-      {/* Center */}
-      <circle cx="12" cy="12" r="3" fill="#ffffff" />
-      <circle cx="12" cy="12" r="2" fill="#ffd54f" />
-    </svg>
+    <motion.div
+      animate={{ rotate: 360 }}
+      transition={{ ease: "linear", duration: 4, repeat: Infinity }}
+      className={`${className} shrink-0`}
+    >
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Petals */}
+        <circle cx="12" cy="6.5" r="3.5" fill={color} />
+        <circle cx="17.5" cy="10.5" r="3.5" fill={color} />
+        <circle cx="15.5" cy="17" r="3.5" fill={color} />
+        <circle cx="8.5" cy="17" r="3.5" fill={color} />
+        <circle cx="6.5" cy="10.5" r="3.5" fill={color} />
+        {/* Center */}
+        <circle cx="12" cy="12" r="3" fill="#ffffff" />
+        <circle cx="12" cy="12" r="2" fill="#ffd54f" />
+      </svg>
+    </motion.div>
   );
 };
 
 export const MiniDot: React.FC<{ className?: string }> = ({ className = "w-2 h-2" }) => (
-  <svg className={className} viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg className={`${className} shrink-0`} viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="4" cy="4" r="2" fill="#ffffff" opacity="0.8" />
   </svg>
 );
 
 export default function FlowerBorder() {
-  // We can render a set of repeating flowers and dots using CSS flexbox for top and bottom,
-  // and absolute positioning for left and right columns.
-  const flowersCount = 16;
+  const flowersCount = 12;
   const items = Array.from({ length: flowersCount }).map((_, i) => ({
     color: FLOWER_COLORS[i % FLOWER_COLORS.length],
     id: i,
   }));
 
+  // Double items for seamless infinite scroll loops
+  const doubledItems = [...items, ...items];
+
   return (
-    <div className="absolute inset-0 pointer-events-none select-none z-20 flex flex-col justify-between p-1.5">
-      {/* Top border */}
-      <div className="w-full flex justify-between items-center px-4">
-        {items.map((item) => (
-          <React.Fragment key={`top-${item.id}`}>
-            <CuteFlower color={item.color} className="w-5 h-5 sm:w-7 sm:h-7 drop-shadow-sm" />
-            <MiniDot className="w-1.5 h-1.5 text-white/50 hidden sm:block" />
-          </React.Fragment>
-        ))}
-      </div>
-
-      {/* Middle section with side borders */}
-      <div className="flex-1 flex justify-between px-1.5 py-4">
-        {/* Left column */}
-        <div className="flex flex-col justify-between items-center h-full">
-          {items.slice(0, 8).map((item) => (
-            <React.Fragment key={`left-${item.id}`}>
-              <CuteFlower color={item.color} className="w-5 h-5 sm:w-7 sm:h-7 drop-shadow-sm" />
-              <MiniDot className="w-1.5 h-1.5 text-white/50" />
+    <div className="absolute inset-0 pointer-events-none select-none z-20 flex flex-col justify-between p-1">
+      {/* Top border - horizontally running right */}
+      <div className="w-full flex items-center overflow-hidden h-38">
+        <motion.div
+          className="flex gap-6 items-center shrink-0 pr-6"
+          animate={{ x: ["-50%", "0%"] }}
+          transition={{ ease: "linear", duration: 15, repeat: Infinity }}
+        >
+          {doubledItems.map((item, idx) => (
+            <React.Fragment key={`top-${idx}`}>
+              <CuteFlower color={item.color} className="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-sm" />
+              <MiniDot className="w-2 h-2 text-white/55" />
             </React.Fragment>
           ))}
+        </motion.div>
+      </div>
+
+      {/* Middle section with vertically running side borders */}
+      <div className="flex-grow flex justify-between relative overflow-hidden">
+        {/* Left column - vertically running up */}
+        <div className="w-16 h-full flex flex-col items-center overflow-hidden">
+          <motion.div
+            className="flex flex-col gap-6 items-center shrink-0 pb-6"
+            animate={{ y: ["0%", "-50%"] }}
+            transition={{ ease: "linear", duration: 15, repeat: Infinity }}
+          >
+            {doubledItems.map((item, idx) => (
+              <React.Fragment key={`left-${idx}`}>
+                <CuteFlower color={item.color} className="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-sm" />
+                <MiniDot className="w-2 h-2 text-white/55" />
+              </React.Fragment>
+            ))}
+          </motion.div>
         </div>
 
-        {/* Right column */}
-        <div className="flex flex-col justify-between items-center h-full">
-          {items.slice(4, 12).map((item) => (
-            <React.Fragment key={`right-${item.id}`}>
-              <CuteFlower color={item.color} className="w-5 h-5 sm:w-7 sm:h-7 drop-shadow-sm" />
-              <MiniDot className="w-1.5 h-1.5 text-white/50" />
-            </React.Fragment>
-          ))}
+        {/* Right column - vertically running down */}
+        <div className="w-16 h-full flex flex-col items-center overflow-hidden">
+          <motion.div
+            className="flex flex-col gap-6 items-center shrink-0 pt-6"
+            animate={{ y: ["-50%", "0%"] }}
+            transition={{ ease: "linear", duration: 15, repeat: Infinity }}
+          >
+            {doubledItems.map((item, idx) => (
+              <React.Fragment key={`right-${idx}`}>
+                <CuteFlower color={item.color} className="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-sm" />
+                <MiniDot className="w-2 h-2 text-white/55" />
+              </React.Fragment>
+            ))}
+          </motion.div>
         </div>
       </div>
 
-      {/* Bottom border */}
-      <div className="w-full flex justify-between items-center px-4">
-        {items.reverse().map((item) => (
-          <React.Fragment key={`bottom-${item.id}`}>
-            <CuteFlower color={item.color} className="w-5 h-5 sm:w-7 sm:h-7 drop-shadow-sm" />
-            <MiniDot className="w-1.5 h-1.5 text-white/50 hidden sm:block" />
-          </React.Fragment>
-        ))}
+      {/* Bottom border - horizontally running left */}
+      <div className="w-full flex items-center overflow-hidden h-38">
+        <motion.div
+          className="flex gap-6 items-center shrink-0 pr-6"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ ease: "linear", duration: 15, repeat: Infinity }}
+        >
+          {doubledItems.map((item, idx) => (
+            <React.Fragment key={`bottom-${idx}`}>
+              <CuteFlower color={item.color} className="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-sm" />
+              <MiniDot className="w-2 h-2 text-white/55" />
+            </React.Fragment>
+          ))}
+        </motion.div>
       </div>
     </div>
   );
 }
+

@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sophia Le | VinUni ENGL1030 Interactive React Portfolio",
+  title: "Nguyễn Lê Tú Oanh | VinUni ENGL1030 Interactive React Portfolio",
   description: "VinUniversity ENGL1030 Course Portfolio utilizing Next.js, Convex schema patterns, Tailwind CSS v4, and Framer Motion transitions.",
 };
 
@@ -40,7 +40,7 @@ export default function RootLayout({
           </div>
           <footer className="border-t border-navy-800 bg-navy-950/80 py-6 text-center text-xs text-slate-500">
             <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2">
-              <p>© 2026 Sophia Le. All Rights Reserved.</p>
+              <p>© 2026 Nguyễn Lê Tú Oanh. All Rights Reserved.</p>
               <p>VinUni ENGL1030 Academic English Project</p>
             </div>
           </footer>

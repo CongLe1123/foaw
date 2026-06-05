@@ -9,9 +9,8 @@ import { Menu, X, Heart, Star } from "lucide-react";
 const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "Reflections (SOP)", href: "/sop" },
-  { label: "Job-Seeking Suite", href: "/artifacts" },
-  { label: "Connection", href: "/contact" },
-  { label: "CMS Workspace", href: "/editor" }
+  { label: "Study Exchange Package", href: "/artifacts" },
+  { label: "Connection", href: "/contact" }
 ];
 
 function DesktopNav() {
@@ -68,11 +67,10 @@ function MobileDrawer({ open, setOpen }: MobileDrawerProps) {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`flex items-center gap-2 p-3 rounded-lg border-2 border-black transition-all duration-300 ${
-                    isActive
-                      ? "bg-[#ff5493]/15 text-[#ff5493] font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
-                      : "bg-white text-slate-700 hover:bg-pink-50"
-                  }`}
+                  className={`flex items-center gap-2 p-3 rounded-lg border-2 border-black transition-all duration-300 ${isActive
+                    ? "bg-[#ff5493]/15 text-[#ff5493] font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                    : "bg-white text-slate-700 hover:bg-pink-50"
+                    }`}
                 >
                   <Heart className="w-4 h-4 text-[#ff5493] fill-current" />
                   {item.label}

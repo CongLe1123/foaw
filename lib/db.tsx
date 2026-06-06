@@ -110,7 +110,7 @@ ttadao@hcmus.edu.vn`,
 
 ## **Summary**
 
-I am a  first-year medical student at VinUniversity who wants to broaden my horizen about clinical work in a more diverse environment. Combines a basic medical knowledge with hands-on experience in biological research, national-level academic event organizer, and environmental volunteer. Proven ability to deal with complex, new environments from laboratory to the real ecological field trip. I am eager to contribute to and expand academic horizons through the exchange program at Sechenov University.
+I am a first-year medical student at VinUniversity who wants to broaden my horizons about clinical work in a more diverse environment. I combine basic medical knowledge with hands-on experience in biological research, experience as a national-level academic event organizer, and environmental volunteering. Proven ability to deal with complex, new environments from laboratory to the real ecological field trip. I am eager to contribute to and expand academic horizons through the exchange program at Sechenov University.
 
 ## **Education**
 

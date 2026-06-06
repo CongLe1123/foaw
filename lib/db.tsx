@@ -51,25 +51,16 @@ const INITIAL_ARTIFACTS: Artifact[] = [
   {
     key: "exchange-sop",
     title: "Exchange Statement of Purpose",
-    documentBody: `# Exchange Statement of Purpose
-
-Dear Admissions Committee,
-
-I am writing to express my strong interet in the medical exchange program at Sechenov University. My journey into medicine is driven by a huge fascination with health science and a desire to understand global healthcare systems. As a first-year medical student studying medical doctor at VinUniversity, I dedicate myself to both natural and clinical sciences. I believe that participating in this exchange program at Sechenov University is the next crucial step to broaden my medical perspective.
-
-My desire to join the Sechenov community was solidified when I watched a youtube vlog by a vlogger Thao Trinh, who is studying at your university. I was deeply moved by Sechenov’s supportive, rich history and international environment. These factors align perfectly with my personal desire. I believe that Sechenov University’s academic environment will provide the ideal platform for me to develop my medical knowledge and bring valuable global insights back to Vietnam.
-
-My academic record reflects a consistent dedication to the sciences. Throughout my three years of high school, I have maintained a GPA of 9.5 or higher, with a focus on excelling in Biology, Chemistry, and Physics. At VinUniversity, these subjects, along with my medical coursework, have provided me with the necessary basic foundation for futher medical journey. However, I believe that true learning occurs when theory is applied to the field.
-
-While VinUniversity has a great international campus, the actual work on the hospital here is still mostly with Vietnamese doctors and local patients. That is why I want to study disaster medicine and bioethics at Sechenov University. Moscow is a center of Russia, and also a global hub so I can have a chance to work with diverse patient groups and listen to them, understand them. This will give me the real international hospital experience I cannot get at my university. I want to bring these specialized skills back to help our medical community in Vietnam.
-
-Living and studying at VinUniversity, where English is the primary language and I collaborate with international faculty daily, has prepared me well for this step. I am confident that my adaptability, scientific curiosity, and alignment with Sechenov University’s values make me a prepared exchange candidate.  
-I am confident that my strong medical foundation at VinUniversity, hand-on research experience, and alignment with Sechenov University’s values make me a prepared and adaptable exchange candidate. I look forward to the possibility of contributing to your vibrant scientific community and utilizing this international experience to make a meaningful impact on global health.
-
-Thank you for your time and consideration.
-
-Sincerely,
-Oanh Nguyen`,
+    documentBody: `Dear Admissions Committee,  
+I am writing to express my strong interest in the medical exchange program at Sechenov University. My journey into medicine is driven by a huge fascination with health science and a desire to understand global healthcare systems. As a first-year student  who is studying  medical doctor program at VinUniversity, I dedicate myself to both natural and clinical sciences. I believe that participating in this exchange program at Sechenov University is the next crucial step to broaden my medical perspective.  
+My desire to join the Sechenov community was solidified when I watched a youtube vlog by Thao Trinh, who is studying at your university. I was deeply moved by Sechenov’s supportive, rich history and international environment. These factors align perfectly with my personal aspiration. I believe that Sechenov University’s academic environment will provide the ideal platform for me to develop my medical knowledge and bring valuable global insights back to Vietnam.  
+My academic record reflects a consistent dedication to the sciences. Throughout my three years of high school, I have maintained a GPA of 9.5 or higher, with a focus on excelling in Biology, Chemistry, and Physics. At VinUniversity, these subjects, along with my medical coursework, have provided me with the necessary basic foundation for further medical journey. However, I believe that true learning occurs when theory is applied to the field.  
+While VinUniversity has a great international campus, the clinical work at the hospitals here is still mostly with Vietnamese doctors and patients. That is why I want to have a study exchange chance at Sechenov University. Moscow is the center of Russia, and many hospitals and institutes of your university are central level in Russia and other surrounding countries so I can work with diverse patient groups and many rare cases. For example, the recent 2025 case of a 10 months old baby had a dual genetic mutation of familial dilated cardiomyopathy and arterial calcification. Furthermore, I am deeply attracted by Sechenov’s traditional mentorship model, where professors directly guide students, helping me to actively assist in these complex clinical decisions rather than just observing from a distance. This will give me the real international hospital experience I cannot get at my university. I want to bring these specialized skills back to help our medical community in Vietnam.  
+Living and studying at VinUniversity, where English is the primary language and I collaborate with international faculty daily, has prepared me well for this step. I am confident that my strong medical foundation at VinUniversity, hands-on research experience, and alignment with Sechenov University’s values make me a prepared and adaptable exchange candidate. I look forward to the possibility of contributing to your vibrant scientific community and utilizing this international experience to make a meaningful impact on global health.  
+Thank you for your time and consideration.  
+Sincerely,  
+Oanh Nguyen  
+`,
     reviewer1Name: "An Nguyen",
     reviewer1Date: "2026-05-15",
     reviewer1Feedback: "The structuring is logical, but consider expanding on the specific examples of cultural shocks.",
@@ -115,71 +106,70 @@ ttadao@hcmus.edu.vn`,
     documentBody: `# **Nguyen Le Tu Oanh**
 
 **Address:** Ha Noi City, Vietnam   
-**Phone:** +84 908 121 068 | **Email:** 25oanh.nlt@Vinuni.edu.vn  
+**Phone:** \+84 908 121 068 | **Email:** 25oanh.nlt@Vinuni.edu.vn
 
-## **📑 PROFESSIONAL SUMMARY**
+## **Summary**
 
 I am a  first-year medical student at VinUniversity who wants to broaden my horizen about clinical work in a more diverse environment. Combines a basic medical knowledge with hands-on experience in biological research, national-level academic event organizer, and environmental volunteer. Proven ability to deal with complex, new environments from laboratory to the real ecological field trip. I am eager to contribute to and expand academic horizons through the exchange program at Sechenov University.
 
-## **🎓 EDUCATION BACKGROUND**
+## **Education**
 
 **VinUniversity (VinUni)** | *2025 - Present*
 
-* **Degree:** Bachelor of General Medicine (MD Program)  
-* **Current Status:** First-Year Student (Freshman)  
+* **Degree:** Bachelor of Medical Doctor Program  
+* **Current Status:** First-Year Student   
 * **Relevant Coursework:** Medical Biology, Medical Chemistry, Medical Biochemistry, Medical Biophysic, Introduction to Healthcare Communication.
 
-**High School for the Gifted - VNU-HCM (Phổ thông Năng khiếu)** | *Graduated*
+**High School for the Gifted - VNU-HCM** | *Graduated*
 
-* **Major:** Specialized in Biology
+* **Major:** Specialized in Biology. GPA: 9.7
 
-## **🔬 RESEARCH & ACADEMIC EXPERIENCES**
+## **Research**
 
 **University Research | Public Health & Urban Epidemiology** | *2026*
 
 * **Project:** The impact of building design features on mosquito distribution and abundance in high-rise residential complexes.  
-* **Focus:** Investigated how modern building designs and vertical infestation profiles affect mosquito breeding habits and dengue transmission, aiming to propose structural interventions for urban disease control.
+* **Focus:** Investigated how modern building designs affect mosquito breeding habits and dengue transmission, aiming to propose structural interventions for urban disease control.
 
 **Highschool Laboratory Research | Ecology** | *2024*
 
-* **Project:** Survey on the food composition of Asian Toad (*Duttaphrynus melanostictus*) at Parks, City. Ho Chi Minh  
+* **Project:** Survey on the food composition of Asian Toad (*Duttaphrynus*  
+* *melanostictus)* at Parks inHo Chi Minh  
 * **Methodology:** Do field surveys and dietary analysis of urban toad populations to assess food composition and ecological roles in urban green spaces. This research provided foundational insights into natural control. 
 
-## **🏆 LEADERSHIP, EXTRA-CURRICULAR & VOLUNTEER EXPERIENCES**
+## **Extra-curricular  & Volunteer Experiences**
 
-**National Medical Academic Competition (NMAC 2025)**  
+**National Medical Academic Competition (NMAC 2025\)**  
 *Organizing Committee Member - Design Team* | *2025*
 
-* Collaborated in branding and creating visual educational assets for Vietnam's premier national-level academic contest for medical students.
+* Collaborated in branding and creating visual social media posts, merches and backdrop to promote a national level competition.
 
 **TUMORACE 2026: RUN WITH EMPATHY**  
 *Active Participant / Runner* | *2026*
 
-* Engaged in an intensive biomedical challenge focused on oncology, problem-solving, and speed-remedy strategies under high-pressure scenarios.
+* Engaged in a running challenge focused on cancer, problem-solving, and understanding patients' emotions.
 
 **Con Dao National Park Conservation Program**  
-*Marine Conservation Volunteer* | *2025*
+*Marine Conservation Volunteer* | *2024*
 
-* Participated in hands-on field activities dedicated to marine ecosystem preservation, sea turtle nesting protection, and coastal biodiversity monitoring.
+* Participated in hands-on field activities dedicated to marine ecosystem preservation, sea turtle nesting protection, and coastal biodiversity monitoring, trash picking.
 
 **High School for the Gifted German Club (PTNK Deutschklub)**  
 *Club Advisor* | *Present*
 
 * Provide strategic guidance, event planning mentorship, and cultural exchange support for the club's executive board.
 
-## **🌐 LANGUAGES & SKILLS**
+## **Language & Skill**
 
 **Languages:**
 
 * **Vietnamese:** Native  
 * **English:** Proficient (**IELTS Overall 7.5**)  
 * **German:** Intermediate (**B1 Level**)  
-
-**Technical & Creative Skills:**  
+  **Skills:**  
 * **Digital drawing & Canva design**   
 * Handicraft stuff & Floral Arrangement  
-
-**Soft Skills:** Public speaking, bilingual MC, small business management, english tutoring, flower arranging`,
+  **Soft Skills:** Public speaking, bilingual MC, small business management, english tutoring, flower arranging`,
     reviewer1Name: "Binh Tran",
     reviewer1Date: "2026-05-14",
     reviewer1Feedback: "Make sure to list your key technical skills clearly. The layout looks clean and easy to scan.",

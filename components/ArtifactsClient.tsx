@@ -62,7 +62,7 @@ export default function ArtifactsClient() {
       case "letter-of-recommendation":
         return "LETTER OF RECOMMENDATION";
       case "exchange-sop":
-        return "EXCHANGE STATE OF PURPOSE";
+        return "EXCHANGE STATEMENT OF PURPOSE";
       default:
         return "ACADEMIC DOCUMENT";
     }

@@ -50,8 +50,8 @@ There are 5 distinct artifacts in my study exchange package that show my prepara
 const INITIAL_ARTIFACTS: Artifact[] = [
   {
     key: "exchange-sop",
-    title: "Exchange State of Purpose",
-    documentBody: `# Exchange State of Purpose
+    title: "Exchange Statement of Purpose",
+    documentBody: `# Exchange Statement of Purpose
 
 Dear Admissions Committee,
 

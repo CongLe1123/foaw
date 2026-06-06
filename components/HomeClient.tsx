@@ -160,7 +160,7 @@ export default function HomeClient() {
               <Link href="/artifacts?tab=exchange-sop" className="w-full aspect-[4/3] rounded-2xl overflow-hidden bg-white border-3 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] relative group block">
                 <img
                   src="/State of Purpose.png"
-                  alt="Exchange State of Purpose"
+                  alt="Exchange Statement of Purpose"
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </Link>

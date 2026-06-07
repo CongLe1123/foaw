@@ -41,7 +41,7 @@ const INITIAL_PROFILE: Profile = {
 
 const INITIAL_SOP: Sop = {
   content: `**REFLECTION SOP**  
-I am a freshman medical doctor university student; to be completely honest, when I first started university, I did not focus much on academic or professional writing courses. I used to think that writing academically did not really match my future career path as a medical doctor. However, going through this course has changed my perspective alot. I learned that having solid medical knowledge is undoutedly neccessary but knowing academic writing skills like how to communicate and prepare documents for my research, job seeking and futher study program is also crucial for my background as a future medical doctor.  
+I am a freshman medical doctor university student; to be completely honest, when I first started university, I did not focus much on academic or professional writing courses. I used to think that writing academically did not really match my future career path as a medical doctor. Previously, whenever I wanted to cite my sources, I would just go to scopus or pubmed with the title and copy the citation without any check or change. However, going through this course has changed my perspective alot. I learned that having solid medical knowledge is undoutedly neccessary but knowing academic writing skills like how to communicate and prepare documents for my research, job seeking and futher study program is also crucial for my background as a future medical doctor. Now, I can do my reference list with both APA 7 structure and format.  
 I have chosen a study exchange package because this one is the most copatible one for my nearest goal as seeking a global clinical environment. My aim now is securing an international exchange slot at Sechenov University to gain actual exposure to a global healthcare environment. While my current study journey at VinUniversity provides a great environment, I know that when I start my clinical years in the hospital here, the work will still mostly be with Vietnamese doctors and local patients. My portfolio is built to show my aim that I want to expand my horizons beyond this local zone. By highlighting my high school biology background, my German exchange trip, and my field research, I want to prove to the admissions committee that I am ready to handle a highly diverse, international patient environment in a global hub like Moscow.  
 There are 5 distinct artifacts in my study exchange package that show my preparation. The first artifact in my package is my Letter of Recommendation (LOR), which formally highlights my research journey and character from a professor's perspective. My second artifact is an exchange Statement of Purpose (SOP) prepared for Sechenov University. In the SOP, I explain directly why I need an international area like Moscow to learn how to treat diverse, global populations with different backgrounds, religions and mindset. My third artifact is my Cultural Adaptation Essay, where I focus on my previous experiences, like my Goethe-Institut exchange trip to Germany to try their food, wear their traditional clothes which I had bought one for myself, and talk with the locals to prove I can adapt to a European university environment smoothly. The fourth artifact is my CV, which shows my actual education, my language skills, and my extracurricular roles like organizing national medical competitions and volunteering for marine conservation. The fifth and final artifact is my Study Plan where I talk about the exact four courses I want to take which are Medical Emergencies, Bioethics, Epidemiology, and Medical Psychology and how they connect to my long-term goals.
 `
@@ -72,15 +72,13 @@ Oanh Nguyen
   {
     key: "letter-of-recommendation",
     title: "Letter of Recommendation",
-    documentBody: `# Letter of recommendation
-
-To Whom It May Concern,
+    documentBody: `To Whom It May Concern,
 
 I am pleased to introduce Nguyen Le Tu Oanh for your Sechenov University exchange program. I have known her for about four years, and as her research instructor and biology teacher in high school, I have had the opportunity to witness her remarkable growth and achievements. Tu Oanh is an intelligent, thoughtful, and responsible student who has impressed me with her talents.
 
-When I first met her in the 10th grade class, I was impressed by her skills in this subject. After starting 10th grade at our specialized biology school, she engaged in school activities with enthusiasm and passion. When I became her research instructor, I gradually got to know Tu Oanh better. I realized that she is very well-rounded. Whenever she encounters complex problems in science or life, even her fear of toads, she always finds a way to overcome them. I am especially impressed by her willingness to wholeheartedly help her friends overcome both physical and mental injury.
+When I first met her in the 10th grade biology class, I was impressed by her skills in this subject. After starting 10th grade at our specialized biology school, she engaged in school activities with enthusiasm and passion. When I became her research instructor, I gradually got to know Tu Oanh better. I realized that she is very well-rounded. Whenever she encounters complex problems in science or life, even when facing difficulties in using laboratory equipment or field research, she always finds a way to overcome them. I am especially impressed by her willingness to wholeheartedly help her friends overcome both physical and mental injury.
 
-Oanh consistently ranks among the top students in her class. She actively contributes to lessons and helps her classmates who may not fully understand the material. When I organize biology experiments in the laboratory, Oanh is always the most enthusiastic and responsible participant. She loves exploring biological phenomena and works very carefully during practical hours. She completes her homework quickly, allowing her free time to spend on her research project and fieldtrip. Additionally, she is a responsible student, who adheres to rules and takes the initiative to clean her living space and lab desk when necessary.
+Oanh consistently ranks among the top students in her class. She actively contributes to lessons and helps her classmates who may not fully understand the material. When I organize biology experiments in the laboratory, Oanh is always the most enthusiastic and responsible participant. She loves exploring biological phenomena and works very carefully during practical hours. She completes her homework quickly, allowing her free time to spend on her research project : "Survey on the food composition of Asian Toad (Duttaphrynus melanostictus) at Parks in Ho Chi Minh City” and fieldtrip. Additionally, she is a responsible student, who adheres to rules and takes the initiative to clean her living space and lab desk when necessary.
 
 Oanh has significant potential for leadership and organizing class activities. In our classes that required group presentations related to the biology lessons, I observed her leadership during her talks. She often spoke confidently, making it easy for everyone in the class to follow the content. She has a great mindset of critical inquiry, always wanting to understand the the way behind what she learns. She also showcases various creative talents, including floral design, singing, craft things which always bring positive energy to our community.
 
@@ -88,9 +86,12 @@ Given Oanh's strong moral qualities, scientific abilities, and excellent present
 
 Sincerely,
 
-Tran Thi Anh Dao  
-Vice Head of the Department of Ecology and Evolutionary Biology  
-VNUHCM - University of Science  
+Tran Thi Anh Dao
+
+Vice Head of the Department of Ecology and Evolutionary Biology
+
+VNUHCM - University of Science
+
 ttadao@hcmus.edu.vn`,
     reviewer1Name: "Duy Pham",
     reviewer1Date: "2026-05-17",
@@ -114,13 +115,13 @@ I am a first-year medical student at VinUniversity who wants to broaden my horiz
 
 ## **Education**
 
-**VinUniversity (VinUni)** | *2025 - Present*
+**VinUniversity (VinUni)** | *2025 – Present*
 
 * **Degree:** Bachelor of Medical Doctor Program  
 * **Current Status:** First-Year Student   
 * **Relevant Coursework:** Medical Biology, Medical Chemistry, Medical Biochemistry, Medical Biophysic, Introduction to Healthcare Communication.
 
-**High School for the Gifted - VNU-HCM** | *Graduated*
+**High School for the Gifted – VNU-HCM** | *Graduated*
 
 * **Major:** Specialized in Biology. GPA: 9.7
 
@@ -134,13 +135,13 @@ I am a first-year medical student at VinUniversity who wants to broaden my horiz
 **Highschool Laboratory Research | Ecology** | *2024*
 
 * **Project:** Survey on the food composition of Asian Toad (*Duttaphrynus*  
-* *melanostictus)* at Parks inHo Chi Minh  
+* *melanostictus)* at Parks in Ho Chi Minh city  
 * **Methodology:** Do field surveys and dietary analysis of urban toad populations to assess food composition and ecological roles in urban green spaces. This research provided foundational insights into natural control. 
 
 ## **Extra-curricular  & Volunteer Experiences**
 
 **National Medical Academic Competition (NMAC 2025\)**  
-*Organizing Committee Member - Design Team* | *2025*
+*Organizing Committee Member – Design Team* | *2025*
 
 * Collaborated in branding and creating visual social media posts, merches and backdrop to promote a national level competition.
 
@@ -181,11 +182,14 @@ I am a first-year medical student at VinUniversity who wants to broaden my horiz
   {
     key: "cultural-adaptation",
     title: "Cultural Adaptation",
-    documentBody: `# Cultural Adaptation
-As a medical student who is preparing for a study exchange program, I have trained myself to be quickly adaptable to new environments. My ability to fit into different cultural and academic settings comes from my journey of learning and exposing myself to new challenges. From my specialized ecological and cultural activity background in high school to my current international university environment, each step has helped me build the resilience and adaptability I need to apply for the exchange program at Sechenov University.
+    documentBody: `As a medical student who is preparing for a study exchange program, I have trained myself to be quickly adaptable to new environments. My ability to fit into different cultural and academic settings comes from my journey of learning and exposing myself to new challenges. From my specialized ecological and cultural activity background in high school to my current international university environment, each step has helped me build the resilience and adaptability I need to apply for the exchange program at Sechenov University.
+
 My journey started during my very first year in my High School where I first joined my Deutschklub and learnt German to study medicine abroad in Germany in the future. Fortunately, I reached B2 level in my German which led me to a memorible cultural exchange trip to Heidelberg University organized by the Goethe institute. Living and studying with many global friends, trying local cuisine and even buying myself German traditional clothes in a European university town for the first time taught me how to adapt to a new culture and communicate with people from different backgrounds. Moreover, based on cultural difficulties I had in Germany, I have already begun researching Russian social etiquette and cultural norms to ensure a smooth transition into life in Moscow.
+
 I also tested my adaptability through outdoor voluntary activities and field research. When I did my ecological survey on the toads in Ho Chi Minh City parks and volunteering for ocean conservation at Con Dao National Park really pushed me out of my comfort zone. As someone who had a fear of insects, sticky organisms and had never traveled to rugged, unpredictable environments before, these projects initially felt overwhelming. However, these experiences taught me to be proactive when entering new environments, which is very important for an exchange program. Just as I learned to step out of my comfort zone in those strange environments combined with several experiences in international settings, I am confident to adapt to Moscow’s harsh winter and the fast-paced life. 
+
 Currently, as a medical student at VinUniversity, cultural adaptation is part of my daily life. Studying in an all-English environment has improved my communication skills. Plus, working and living in the same dorm with international classmates and faculty members every day has sharpened my teamwork and empathy. This multicultural setting makes me highly comfortable working in global teams, which will help me understand the lectures and involve my global peers better.
+
 Lastly, my first year in an international campus life at VinUniversity, which proves that I am ready for Sechenov University. I have the language tools, the scientific curiosity, and the daily experience of studying in an English-dominant environment. These skills will allow me to fit right into the academic culture at Sechenov University, where I am excited to experience Russia’s rich medical heritage and collaborate with my future Russian classmates and mentors.`,
     reviewer1Name: "An Nguyen",
     reviewer1Date: "2026-05-15",
